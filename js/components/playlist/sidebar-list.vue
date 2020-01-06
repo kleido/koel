@@ -69,6 +69,7 @@ export default {
         if (this.creating) {
           this.creating = false
         } else {
+          event.stopImmediatePropagation();
           this.$refs.contextMenu.open(event.pageY, event.pageX)
         }
       })
